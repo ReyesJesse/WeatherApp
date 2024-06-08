@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+<div class="appContainer">
+    <div class="appWrapper">
+        <div class="searchIcon">
+            <i class="fa fa-search icon">
+            </i>
+            <input class="search"
+            onfocus="this.placeholder = ''"
+              placeholder = 'Search your City'"
+                   type="text">
+        </div>
+        <div class="weather loading">
+            <h2 class="city">Weather in Chicago</h2>
+            <div  class="temp">7.74°C</div>
+            <div>
+                <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+                        </div>
+            <div class="description">Cloudy</div>
+            <div class="wind">Wind speed: 6.2 km/h</div>
+            <div class="humidity"> humidity: 60% </div>
+            
+        </div>
+        <div class="weeklyWeather"></div>
+       
+       
+    </div>
+    
+</div>
+
+<style>
+  
+    .weather{
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        top: 3rem;
+        position: relative;
+        display: block;
+        line-height: 5rem;
+        color: white;
+        width: 60%;
+    }
+    .weather h2,
+    .weather span,
+    .weather div{
+        margin-left: 2rem;
+        font-size: 2rem;
+        flex-wrap: wrap;
+        text-transform: capitalize;
+
+
+
+
+    }
+    .searchIcon{
+border-radius: 25px;
+        text-align: center;
+        position: relative;
+            margin-bottom: 10px;
+            padding: 10px;
+            
+    }
+    .searchIcon i{
+        
+        position: absolute;
+        margin-left: 1rem;
+        margin-top: 5px;
+        min-width: 10px;
+        font-size: 25px;
+        color: #a9a9a9;
+        
+
+    }
+    .weather img{
+        width:60px;
+  }
+    
+      input[type=text]:hover{
+      box-shadow: 0 0 5pt 0.5pt #3e3f3f;
+}
+     input[type=text]:focus {
+     box-shadow: 0 0 5pt 2pt #3e3f3f;
+     outline-width: 0px;
+     
+}
+input[type=text]{
+    font-size: 1.3rem;
+    font-family: Caviar;
+}
+::placeholder{
+    color: #a9a9a9;
+
+}
+    .search{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 10);
+
+        border: solid 1.5px #D3D3D3;
+        border: none;
+        text-align: center;
+        -webkit-transition: 1s; /* Safari */
+  transition: 1s;
+        border-radius: 10px;
+        padding: 5px 5px;
+        width: 50%;
+    }
+    .appWrapper{
+        width: 80%;
+        height: 80vh;
+        border-radius: 20px;
+
+       
+    }
+    .appContainer{
+        display: flex;
+  align-items: center;
+  justify-content: center;
+        display: flex;
+        position: relative;
+        height: 100vh;
+      
+    }
+    body {
+        backdrop-filter: blur(10px);
+
+background-repeat: no-repeat;
+background-size: cover;
+        font-family:Caviar;
+        box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+</style>
+<script src="index.js"></script>
+
+</body>
+</html>
